@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// 位置と角度を揺らす
+
 public class TransformShaker : MonoBehaviour
 {
     public Shaker position;
