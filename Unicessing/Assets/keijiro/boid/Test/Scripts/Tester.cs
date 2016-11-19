@@ -11,6 +11,12 @@ public class Tester : MonoBehaviour
         controller = FindObjectOfType<BoidController>();
     }
 
+	void Update(){
+		if (Input.GetKeyUp (KeyCode.Space)) {
+			OnClickSpawnOffScreen ();
+		}
+	}
+
 	public void OnClickSpawn(){
 		controller.RandomSpawn ();
 	}

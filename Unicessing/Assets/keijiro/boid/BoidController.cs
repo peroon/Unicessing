@@ -36,6 +36,10 @@ public class BoidController : MonoBehaviour
     public GameObject Spawn(Vector3 position){
         var rotation = Quaternion.Slerp(transform.rotation, Random.rotation, 0.3f);
         var boid = Instantiate(boidPrefab, position, rotation) as GameObject;
+
+		// Change Trail Color
+		boid.GetComponent<TrailRenderer>().material.color = new Color(Random.value, Random.value, Random.value, Random.value);
+
         boid.GetComponent<BoidBehaviour>().controller = this;
         return boid;
     }
